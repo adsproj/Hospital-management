@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Vcare hospitals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        P{
+            color: grey;
+        
+        }
+
+        .nav-link{
+          color:white;
+        }
+
+        .navbar-brand{
+          
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+  <body>
+
+    <!--header starts-->
+    <header class="" style="position:fixed; z-index: 1;">
+    <nav class="navbar navbar-expand-md bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#home-section" style="margin-inline: 44px;"><i class="bi bi-hospital-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hospital-fill" viewBox="0 0 16 16">
+              <path d="M6 0a1 1 0 0 0-1 1v1a1 1 0 0 0-1 1v4H1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6v-2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5V16h6a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-3V3a1 1 0 0 0-1-1V1a1 1 0 0 0-1-1H6Zm2.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM2.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 9.75v-.5A.25.25 0 0 1 2.25 9Zm0 2h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5ZM13.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25Z"/>
+            </svg> Vcare</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-inline: 510px;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home-section">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service-section">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Department
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#doctor-section">General Medicine</a></li>
+                  <li><a class="dropdown-item" href="#doctor-section">Neuro Medicine</a></li>
+                  <li><a class="dropdown-item" href="#doctor-section">Opthalmology</a></li>
+                  <li><a class="dropdown-item" href="#docnext">Pediatrics</a></li>
+                  <li><a class="dropdown-item" href="#docnext">Urology</a></li>
+                  <li><a class="dropdown-item" href="#docnext">Gastroenterology</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#doctor-section">Doctors</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'userlogin' %}">Login</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'appointment' %}">Appointment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <!--navbar ends-->
+
+      <!--home section first starts-->
+
+    <section>
+      <div class="container p-5" id="home-section">
+        <div class="row" style="margin-inline: -98px;">
+          <div class="col-md-6" style="margin-top: 56px;">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="static\about.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static\about-1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static\h2 (2).jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6 p-5">
+                <h1>Care You Can<br>
+                    Believe In.</h1>
+                    <p>Situated at the river bank of Muvattupuzha, Vcare is administered by Franciscan Clarist sisters of Vimala Province, Kothamangalam. Vcare is a hospital registered under Charitable society ER 503/2001. We aim at providing quality healthcare and valuable experience that is being supported by a team of compassionate and dedicated medical professionals.</p>
+            </div>
+        </div>
+      </div>
+    </section> 
+
+      <!--home section first ends-->
+
+      <!--first section starts-->
+
+      <section class="bg-light pt-5">
+        <div class="container text-center p-3">
+            <h4>Motto</h4>
+            <p>Love in service</p>
+            <h4>Our Vision</h4>
+            <p>Proclaim the glory of God through quality based compassionate healthcare services, bearing witness to CHRIST.</p>
+            <h4>Our Mission</h4>
+            <P>Proclamation of the good news that life – a gift from GOD is worth living, through holistic care to the physically, mentally or spiritually wounded people. Founding all our health care services on Christian values and rendering the same to all people irrespective of religion, caste or community with a preferential option for the downtrodden and underprivileged. Contribute to the better quality of healthcare system in the society by training nurses with knowledge, skills and values.</P>
+            <h4>Quality Policy</h4>
+            <p>Vcare is committed to provide high quality and affordable health care through well defined quality systems and efficient professionals and will actively pursue ever improving quality through periodic training.</p>
+            
+            
+        </div>
+      </section>
+
+      <!--first section ends-->
+
+
+      <!--second sections starts-->     
+
+      <section class="p-4" id="about-section">
+        <div class="row pt-5" style="margin-inline: 50px;">
+            <div class="col-md-6">
+                <img src="https://img.hcinnovationgroup.com/files/base/ebm/hci/image/2021/02/bigstock_Doctor_vaccinating_child_kid__403282658.602e803e53bf2.png?auto=format,compress&fit=clip&height=591.3000000000001&width=909.9" alt="" style="width: 546px;">
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-warning">About Us</h4>
+                <h3>Amazing Facilities
+                    And Graceful Care</h3>
+                    <p>Vcare is a charitable institution established in the year 2001. It was a thoughtful initiative of the Franciscan Clarist Sisters if Vimala Province, Kothamangalam. We aim at providing quality healthcare and valuable experience that is being supported by a team of compassionate and dedicated medical professionals.
+
+                        Balancing the continued commitment to the care of poor and needy, with the developments in the medical technology, we provide affordable and quality service. In spite of our humble beginning with just 75 beds, Vcare now is a state of the art with over 300 bedded and fully fledged facility, major clinical specialities and diagnostic services.</p>
+            </div>
+        </div>
+      </section>
+
+
+      <!--second section ends-->
+
+      <!--third section starts-->
+
+      <section class="bg-success" id="service-section">
+        <div class="container">
+        <h2 class="text-center text-light p-4">Services</h2>
+        <div class="row p-4">
+          <div class="col-md-4">
+            <div class="card p-5" style="width: 15rem;">
+              <i class="fa-solid fa-truck-medical"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M368 0C394.5 0 416 21.49 416 48V96H466.7C483.7 96 499.1 102.7 512 114.7L589.3 192C601.3 204 608 220.3 608 237.3V352C625.7 352 640 366.3 640 384C640 401.7 625.7 416 608 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H256C256 469 213 512 160 512C106.1 512 64 469 64 416H48C21.49 416 0 394.5 0 368V48C0 21.49 21.49 0 48 0H368zM416 160V256H544V237.3L466.7 160H416zM160 368C133.5 368 112 389.5 112 416C112 442.5 133.5 464 160 464C186.5 464 208 442.5 208 416C208 389.5 186.5 368 160 368zM480 464C506.5 464 528 442.5 528 416C528 389.5 506.5 368 480 368C453.5 368 432 389.5 432 416C432 442.5 453.5 464 480 464zM112 176C112 184.8 119.2 192 128 192H176V240C176 248.8 183.2 256 192 256H224C232.8 256 240 248.8 240 240V192H288C296.8 192 304 184.8 304 176V144C304 135.2 296.8 128 288 128H240V80C240 71.16 232.8 64 224 64H192C183.2 64 176 71.16 176 80V128H128C119.2 128 112 135.2 112 144V176z"/></svg>
+              <div class="card-body">
+                <h5 class="card-title">24/7 Ambulance service</h5>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="card p-5" style="width: 15rem;">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/></svg>
+              <div class="card-body">
+                <h5 class="card-title">24/7 Blood bank</h5>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="card p-5" style="width: 15rem;">
+              <i class="fa-solid fa-briefcase-medical"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 96H384V48C384 21.5 362.5 0 336 0h-160C149.5 0 128 21.5 128 48V96H48C21.5 96 0 117.5 0 144v288C0 458.5 21.5 480 48 480h416c26.5 0 48-21.5 48-48v-288C512 117.5 490.5 96 464 96zM176 48h160V96h-160V48zM368 314c0 8.836-7.164 16-16 16h-54V384c0 8.836-7.164 16-15.1 16h-52c-8.835 0-16-7.164-16-16v-53.1H160c-8.836 0-16-7.164-16-16v-52c0-8.838 7.164-16 16-16h53.1V192c0-8.838 7.165-16 16-16h52c8.836 0 15.1 7.162 15.1 16v54H352c8.836 0 16 7.162 16 16V314z"/></svg>
+              <div class="card-body">
+                <h5 class="card-title">Expert Doctors</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--third section ends-->
+
+      <!--fourth section starts-->
+
+      <section class="" id="doctor-section">
+        <div class="container">
+          <div class="row p-4">
+            <h1 class="text-center pt-5">Meet our Doctors</h1>
+          </div>
+        </div>
+
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-md-4"><div class="card" style="width: 18rem;">
+              <img src="static\My-project-64.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dr. Joy Mathew</h5>
+                <p class="card-text">General Medicine</p>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-4"><div class="card" style="width: 18rem;">
+              <img src="static\My-project-43.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dr. Anna Kurian</h5>
+                <p class="card-text">Ophthalmology</p>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-4"><div class="card" style="width: 18rem;">
+              <img src="static\Dr.Pratheep-Joseph-removebg-preview.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dr.Pratheep Joseph</h5>
+                <p class="card-text">Neuro Medicine</p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
+          <div class="row pt-5">
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="static\My-project-60.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dr. Ambily Vargese</h5>
+                  <p class="card-text" id="docnext">Pediatrics</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="static\My-project-52.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dr. Saji John Varghese</h5>
+                  <p class="card-text">Gastroenterology
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="static\My-project-61.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dr. Unnikrishnan</h5>
+                  <p class="card-text">Urology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+ <!--footer section ends-->
+
+
+ <footer class="pt-5">
+  <div class="container-fluid bg-success">
+    <div class="row">
+    <div class="col-md-4 p-3" style="margin-inline: 40px;">
+      <h3 class="pt-4 text-light" style="margin-inline: 30px;">Quick Links</h3>
+      <ul class="text-light" style="list-style-type: none;">
+        <li class="nav-item">
+          <a class="nav-link" href="#about-section">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service-section">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#doctor-section">Doctors</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4" style="margin-inline: -59px;">
+      <h3 class="pt-4 text-light" style="margin-inline: 30px;">Get In Touch</h3>
+      <ul class="text-light" style="list-style-type: none;">
+        <i class="bi bi-hospital"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hospital" viewBox="0 0 16 16">
+          <path d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5Zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9h-.5Zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Z"/>
+          <path d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1V1Zm2 14h2v-3H7v3Zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm0-14H6v1h4V1Zm2 7v7h3V8h-3Zm-8 7V8H1v7h3Z"/>
+        </svg>   &nbsp Vcare medical center,Near private bus-stand,Muvattupuzha,pin-686661<br>
+        <i class="bi bi-envelope"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+        </svg>  &nbsp contact@vcaremedicalcentre.com <br>
+        <i class="bi bi-telephone"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg> &nbsp (0485) 2835343 <br> (0485) 2835151
+      </ul>
+      </div>
+    <div class="col-md-4">
+      <h3 class="pt-4 text-light" style="margin-inline: 200px;">Newsletter</h3><br>
+      <div class="newsletter" style="margin-left: 201px;">
+        <input type="text" class="input" placeholder="Enter your email address"><br>
+        <div class="btn p-3 bg-warning" style="margin-top: 15px; width: 10rem;">Subscribe</div>
+      </div>
+    </div>
+    <hr class="solid text-light">
+    <p class="text-light p-3" style="margin-inline: 29px;">Copyright <i class="bi bi-c-circle"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+      <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+    </svg> 2022 Vcare Medical Center </p>
+   </div>
+  </div>
+ </footer>
+
+ <!--footer section ends-->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

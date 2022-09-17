@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+
+    <table style="border: 1;">
+        <tr>
+            <th>id</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>phone number</th>
+            <th>Department</th>
+            <th>Date of appointment</th>
+        </tr>
+        {% for k in content %}
+        <tr>
+            <th>k.id</th>
+            <th>k.patient Name</th>
+            <th>k.age</th>
+            <th>k.gender</th>
+            <th>k.email</th>
+            <th>k.phone_number</th>
+            <th>k.department</th>
+            <th>k.date_of_appointment</th>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
